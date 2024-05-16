@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Run RHEL8-STIG PlayBook') {
             steps {
-                ansiblePlaybook disableHostKeyChecking: true, installation: 'Ansible_default_path', inventory: './inventory', playbook: './site.yml'
+                ansiblePlaybook disableHostKeyChecking: true, installation: 'Ansible_default_path', inventory: '/tmp/inventory', playbook: './site.yml'
             }
         }
         stage('Deploy') {
