@@ -7,9 +7,9 @@ pipeline {
                 git branch: 'devel', credentialsId: 'a30cb82a-21d9-45ba-8e5b-a8de73c57ef1', url: 'https://github.com/frederickw082922/RHEL8-STIG-JENKINS'
             }
         }
-        stage('Test') {
+        stage('Run RHEL8-STIG PlayBook') {
             steps {
-                echo 'Testing..'
+                ansiblePlaybook disableHostKeyChecking: true, installation: 'Ansible_default_path', inventory: './inventory', playbook: './site.yml'
             }
         }
         stage('Deploy') {
