@@ -113,8 +113,8 @@ audit_log_dir: '/opt'
 rhel_08_010000: true
 rhel_08_010020: true
 rhel_08_010121: true
-rhel_08_010140: true
-rhel_08_010150: true
+rhel_08_010140: false
+rhel_08_010150: false
 rhel_08_010370: true
 rhel_08_010371: true
 rhel_08_010460: true
@@ -637,7 +637,7 @@ rhel8stig_tftp_required: false
 
 # RHEL-08-010140 and RHEL-08-020280
 # Password protect the boot loader
-rhel8stig_bootloader_password_hash: grub.pbkdf2.sha512.changethispassword  # pragma: allowlist secret
+rhel8stig_bootloader_password_hash: grub.pbkdf2.sha512.changethispasswordhash  # pragma: allowlist secret
 rhel8stig_boot_superuser: bootloader_admin
 
 # AIDE settings
