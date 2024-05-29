@@ -111,7 +111,7 @@ audit_log_dir: '/opt'
 # in order for the variables below to take effect.
 # CAT 1 rules
 rhel_08_010000: true
-rhel_08_010020: true
+rhel_08_010020: false
 rhel_08_010121: true
 rhel_08_010140: false
 rhel_08_010150: false
