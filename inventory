@@ -1,2 +1,5 @@
+[all]
 192.168.56.113
+
+[vars:all]
 ansible_become_pass: P@$$word123456789
