@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Git Pull RHEL8-STIG') {
+        stage('Git Clone RHEL8-STIG') {
             steps {
-                git branch: 'devel', credentialsId: 'a30cb82a-21d9-45ba-8e5b-a8de73c57ef1', url: 'https://github.com/frederickw082922/RHEL8-STIG-JENKINS'
+                git branch: 'devel', url: 'https://github.com/frederickw082922/RHEL8-STIG-JENKINS'
             }
         }
         stage('Run RHEL8-STIG PlayBook') {
