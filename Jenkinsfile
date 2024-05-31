@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Run RHEL8-STIG PlayBook') {
             steps {
-                ansiblePlaybook disableHostKeyChecking: true, installation: 'Ansible_default_path', inventory: './inventory', playbook: './site.yml', become: true, becomeUser: jenkins
+                ansiblePlaybook become: true, becomeUser: 'vagrant', colorized: true, credentialsId: 'e9d33be1-a884-4fe2-bdb9-74985383e762', disableHostKeyChecking: true, installation: 'Ansible_default_path', inventory: './inventory', playbook: './site.yml', sudoUser: null, vaultTmpPath: ''
             }
         }
         stage('Deploy') {
